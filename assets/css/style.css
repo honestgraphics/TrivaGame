@@ -6,10 +6,6 @@ html, body {
   background-image: url("https://newevolutiondesigns.com/images/freebies/tropical-beach-background-21.jpg");
 }
 
-
-
-
-
 #title {
   color: #fff;
   font-family: fantasy;
@@ -27,24 +23,41 @@ html, body {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: x-large;
   width: 65%;
-  height: 60%;
+  height: 500px;
   background-color: #3f2401;
   margin: 0 auto;
+  padding-bottom: 1em;
 }
 
+input[type="radio"] {
+  float: left;
+}
+
+input[type="radio"]+p {
+float: left;
+}
+
+
+#startImg {
+  height: 60%;
+  border: solid 1px #3f2401;
+  border-radius: 12px;
+}
+
+#questionButton, 
 #startButton {
   width: 300px;
   height: 100px;
   background-color: #3f2401;
   color: #fff;
   font-family: fantasy;
-  font-size: 40px;
-  position: absolute;
-  bottom: 10%;
-  left: 42%;
+  font-size: 38px;
   border-radius: 12px;
   border: solid 6px #dfcba9;
   letter-spacing: 4px;
+  margin: auto;margin-top: 1em;
+  margin-bottom: 1em;
+  display: block;
 }
 
 #instructions {
