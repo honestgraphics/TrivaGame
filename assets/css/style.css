@@ -1,0 +1,64 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background-color: #fff;
+  background-image: url("https://newevolutiondesigns.com/images/freebies/tropical-beach-background-21.jpg");
+}
+
+
+
+
+
+#title {
+  color: #fff;
+  font-family: fantasy;
+  font-size: 7rem;
+  letter-spacing: 4px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#content {
+  text-align: center;
+  border-radius: 12px;
+  border: solid 6px #dfcba9;
+  color: white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: x-large;
+  width: 65%;
+  height: 60%;
+  background-color: #3f2401;
+  margin: 0 auto;
+}
+
+#startButton {
+  width: 300px;
+  height: 100px;
+  background-color: #3f2401;
+  color: #fff;
+  font-family: fantasy;
+  font-size: 40px;
+  position: absolute;
+  bottom: 10%;
+  left: 42%;
+  border-radius: 12px;
+  border: solid 6px #dfcba9;
+  letter-spacing: 4px;
+}
+
+#instructions {
+  letter-spacing: 1px;
+  line-height: 130%;
+}
+
+.footer {
+  height: 50px;
+  color: rgb(221, 205, 185);
+  background-color: #040000;
+  width: 100%;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-family: 'Playfair Display', serif;
+}
