@@ -12,10 +12,12 @@ $(document).ready(function () {
     ["Music legend General Johnson first performed beach music at a show in Raleigh in 1966 and is now associated with The Charimen of the Board. What hit song by the group contained a line describing its topic as 'Sweet Southern pearls?'", "q3", "Beach Girls", "Surfer Girls", "Carolina Girls", "value4", "Carolina Girls", "", ""],
     ["The Carolina Beach Music Awards are presented each year to acknowledge excellence in beach music. The first CAMMY Awards were held in 1995 in what Tar Heel town that is also associated with Cheerwine?", "q3", "Salisbury", "Morehead City", "Greensboro", "value4", "Salisbury", "", ""],
     ["In 1989, a film revolving around beach music entitled Shag was released. Part of the movie was filmed at Atlantic Beach and starred what child of star Peter Fonda?", "q3", "Felicia Fonda", "Bridget Fonda", "Carrie Fonda", "value4", "Bridget Fonda", "", ""],
-    ["Beach music in North Carolina can trace its roots back to the time just after World War II when radio stations such as WGIV in Charlotte featured programs of what other style, which is said to have heavily influenced beach music?", "q3", "Rock and Roll", "Big Band", "Rhythm and Blues", "value4", "Rhythm and Blues4", "", ""],
+    ["Beach music in North Carolina can trace its roots back to the time just after World War II when radio stations such as WGIV in Charlotte featured programs of what other style, which is said to have heavily influenced beach music?", "q3", "Rock and Roll", "Big Band", "Rhythm and Blues", "value4", "Rhythm and Blues", "", ""],
     ["In its early days, beach music was performed in a variety of locations, including the Pickle Tobacco Warehouse. In what Duplin County town, famous for growing cucumbers, is the warehouse located?", "q3", "Faison", "Oak Grove", "Burgaw", "value4", "Faison", "", ""],
     ["From 1987 to 1990, beach music fans could follow their favorite groups as well as other related news in Carolina Class magazine. The periodical was edited by 'Fessa John Hook, who worked at what Salisbury radio station, the first to broadcast beach music full time?", "q3", "WDAV-FM", "WRDX-FM", "WSAL-FM", "value4", "WRDX-FM", "", ""],
   ];
+  
+  //set variable to get content div, which is where everything is being added and removed
   var content = $("#content");
   //assigns starting value for index of nested array
   var index = 0;
@@ -25,10 +27,9 @@ $(document).ready(function () {
 
   //start game function
   function start() {
-    //create start button
+    //create start button and puts it on page and puts start image on page
     $(content).append('<button type="button" id="startButton">Start Game!</button><img id="startImg" src="https://img1.10bestmedia.com/Images/Photos/215009/10best-bars_54_990x660_201406020318.jpg">');
     //
-
   }
 
   //reset game function
@@ -43,14 +44,22 @@ $(document).ready(function () {
     document.getElementById("answerTimer").innerHTML=sec;
     if (sec === 0) {
       clearInterval(atimer);
-      makeQuestions();
+      if (index < questions.length-1){
+        //bring up new question
+        makeQuestions();
+        }
+      else {
+        //show score
+        clear();
+        $(content).append('<h4>Game Over! Your Score Is:</h4><p>Correct Answers: ' + correctAnswers + '</p><p>Incorrect Answers: ' + uncorrectAnswers + '</p><p>Unanswered Questions: ' + unanswered + '</p><button id="resetButton">Play Again!</button>');
+        }
     }
   }, 1000);
   }
 
   //question timer (30)
   function questionTimer() {
-    var sec = 5;
+    var sec = 30;
     qtimer=setInterval(function(){
     sec--;
     document.getElementById("qTimerID").innerHTML=sec;
@@ -82,7 +91,6 @@ $(document).ready(function () {
     clearInterval(atimer);
     $(content).append('<h3 id="qTimerID">30</h3><form><h4>' + questions[index][0] + '</h4><input type="radio" name="' + questions[index][1] + '" value="' + questions[index][2] + '"><p>' + questions[index][2] + '</p></br><input type="radio" name="' + questions[index][1] + '" value="' + questions[index][3] + '"><p>' + questions[index][3] + '</p></br><input type="radio" name="' + questions[index][1] + '" value="' + questions[index][4] + '"><p>' + questions[index][4] + '</p></br><input type="radio" name="' + questions[index][1] + '" value="' + questions[index][5] + '"><p>' + questions[index][5] + '</p></br><button type="button" id="questionButton">Submit</button></form>');
     questionTimer();
-
   }
 
   //controls what happens when start button is clicked
@@ -90,12 +98,10 @@ $(document).ready(function () {
     //calls the function to populate the question onto the page
     makeQuestions();
   });
-  //results - total scores after all questions answered
 
-
-  //status - correct answer or if they ran out of time
-  $(document.body).on("click", "#questionButton", function () {
-    clearInterval(qtimer);
+//status - correct answer or if they ran out of time
+$(document.body).on("click", "#questionButton", function () {
+  clearInterval(qtimer);
 //right answer
 console.log($("input:checked").val())
 if ($("input:checked").val()==questions[index][6]) {
@@ -130,8 +136,9 @@ if (index < questions.length-1){
   }
 else {
   //show score
-  clear();
-  $(content).append('<h4>Game Over! Your Score Is:</h4><p>Correct Answers: ' + correctAnswers + '</p><p>Incorrect Answers: ' + uncorrectAnswers + '</p><p>Unanswered Questions: ' + unanswered + '</p><button id="resetButton">Play Again!</button>')
+  answerTimer();
+  // clear();
+  // $(content).append('<h4>Game Over! Your Score Is:</h4><p>Correct Answers: ' + correctAnswers + '</p><p>Incorrect Answers: ' + uncorrectAnswers + '</p><p>Unanswered Questions: ' + unanswered + '</p><button id="resetButton">Play Again!</button>')
   }
   });
 
