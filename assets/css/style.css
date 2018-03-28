@@ -26,7 +26,10 @@ html, body {
   height: 500px;
   background-color: #3f2401;
   margin: 0 auto;
+  padding-top: 2em;
   padding-bottom: 1em;
+  padding-left: 2em;
+  padding-right: 2em;
 }
 
 input[type="radio"] {

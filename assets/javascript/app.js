@@ -7,14 +7,14 @@ $(document).ready(function () {
   var atimer;
   var qtimer;
   var questions = [
-    ["In 2005, the North Carolina General Assembly paid homage to beach music by naming what dance the official state popular dance?", "q1", "Cha-Cha", "Shag", "Twist", "value4", "Shag", "assets/images/shag.gif", "assets/images/shag.gif"],
-    ["North Carolina features several beach music festivals held across the state each year. Where will the Pleasure Island Beach Music Festival be held June 5?", "q2", "Carolina Beach", "Sunset Beach", "Surfside Beach", "value4", "Carolina Beach", "", ""],
-    ["Music legend General Johnson first performed beach music at a show in Raleigh in 1966 and is now associated with The Charimen of the Board. What hit song by the group contained a line describing its topic as 'Sweet Southern pearls?'", "q3", "Beach Girls", "Surfer Girls", "Carolina Girls", "value4", "Carolina Girls", "", ""],
-    ["The Carolina Beach Music Awards are presented each year to acknowledge excellence in beach music. The first CAMMY Awards were held in 1995 in what Tar Heel town that is also associated with Cheerwine?", "q3", "Salisbury", "Morehead City", "Greensboro", "value4", "Salisbury", "", ""],
-    ["In 1989, a film revolving around beach music entitled Shag was released. Part of the movie was filmed at Atlantic Beach and starred what child of star Peter Fonda?", "q3", "Felicia Fonda", "Bridget Fonda", "Carrie Fonda", "value4", "Bridget Fonda", "", ""],
-    ["Beach music in North Carolina can trace its roots back to the time just after World War II when radio stations such as WGIV in Charlotte featured programs of what other style, which is said to have heavily influenced beach music?", "q3", "Rock and Roll", "Big Band", "Rhythm and Blues", "value4", "Rhythm and Blues", "", ""],
-    ["In its early days, beach music was performed in a variety of locations, including the Pickle Tobacco Warehouse. In what Duplin County town, famous for growing cucumbers, is the warehouse located?", "q3", "Faison", "Oak Grove", "Burgaw", "value4", "Faison", "", ""],
-    ["From 1987 to 1990, beach music fans could follow their favorite groups as well as other related news in Carolina Class magazine. The periodical was edited by 'Fessa John Hook, who worked at what Salisbury radio station, the first to broadcast beach music full time?", "q3", "WDAV-FM", "WRDX-FM", "WSAL-FM", "value4", "WRDX-FM", "", ""],
+    ["In 2005, the North Carolina General Assembly paid homage to beach music by naming what dance the official state popular dance?", "q1", "Cha-Cha", "Shag", "Twist", "Macarena", "Shag", "assets/images/shag.gif", "assets/images/shaglost.gif"],
+    ["North Carolina features several beach music festivals held across the state each year. Where will the Pleasure Island Beach Music Festival be held this year?", "q2", "Carolina Beach", "Sunset Beach", "Surfside Beach", "Corolla", "Carolina Beach", "assets/images/!!!!!!!!!!!!!!!!!!!!", "assets/images/shaglost.gif"],
+    ["Music legend General Johnson first performed beach music at a show in Raleigh in 1966 and is now associated with The Charimen of the Board. What hit song by the group contained a line describing its topic as 'Sweet Southern pearls?'", "q3", "Beach Girls", "Surfer Girls", "Carolina Girls", "value4", "Carolina Girls", "assets/images/genjohnson.jpg", "assets/images/shaglost.gif"],
+    ["The Carolina Beach Music Awards are presented each year to acknowledge excellence in beach music. The first CAMMY Awards were held in 1995 in what Tar Heel town that is also associated with Cheerwine?", "q3", "Salisbury", "Morehead City", "Greensboro", "value4", "Salisbury", "assets/images/cbmawin.jpg", "assets/images/shaglost.gif"],
+    ["In 1989, a film revolving around beach music entitled Shag was released. Part of the movie was filmed at Atlantic Beach and starred what child of star Peter Fonda?", "q3", "Felicia Fonda", "Bridget Fonda", "Carrie Fonda", "value4", "Bridget Fonda", "assets/images/bridgetwin.jpg", "assets/images/shaglost.gif"],
+    ["Beach music in North Carolina can trace its roots back to the time just after World War II when radio stations such as WGIV in Charlotte featured programs of what other style, which is said to have heavily influenced beach music?", "q3", "Rock and Roll", "Big Band", "Rhythm and Blues", "value4", "Rhythm and Blues", "assets/images/randbwin.gif", "assets/images/shaglost.gif"],
+    ["In its early days, beach music was performed in a variety of locations, including the Pickle Tobacco Warehouse. In what Duplin County town, famous for growing cucumbers, is the warehouse located?", "q3", "Faison", "Oak Grove", "Burgaw", "value4", "Faison", "assets/images/shag.gif", "assets/images/shaglost.gif"],
+    ["From 1987 to 1990, beach music fans could follow their favorite groups as well as other related news in Carolina Class magazine. The periodical was edited by 'Fessa John Hook, who worked at what Salisbury radio station, the first to broadcast beach music full time?", "q3", "WDAV-FM", "WRDX-FM", "WSAL-FM", "value4", "WRDX-FM", "assets/images/shag.gif", "assets/images/shaglost.gif"],
   ];
   
   //set variable to get content div, which is where everything is being added and removed
@@ -28,7 +28,7 @@ $(document).ready(function () {
   //start game function
   function start() {
     //create start button and puts it on page and puts start image on page
-    $(content).append('<button type="button" id="startButton">Start Game!</button><img id="startImg" src="https://img1.10bestmedia.com/Images/Photos/215009/10best-bars_54_990x660_201406020318.jpg">');
+    $(content).append('<button type="button" id="startButton">Start Game!</button><img id="startImg" src="https://3.bp.blogspot.com/-TouJIg3A0JM/WUNBLYjzZCI/AAAAAAAAWaQ/oyFWoPfVPuwgDnM5cr7d24u6Yqmzka-HQCLcBGAs/s1600/dfdd8ea6fbbcfc4243e0795f9ff49b97.jpg">');
     //
   }
 
